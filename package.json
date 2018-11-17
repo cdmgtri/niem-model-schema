@@ -1,0 +1,41 @@
+{
+  "name": "niem-model-schema",
+  "version": "1.0.0",
+  "description": "Conceptual schema for the underlying NIEM data model.",
+  "scripts": {
+    "build": "npm run convert && npm run test",
+    "convert": "yaml2json -p -s schemas && npm run test",
+    "test": "npm run test:schemas && npm run test:examples",
+    "test:schemas": "ajv -s assets/json-schema-07.json -d \"schemas/*-schema.json\"",
+    "test:examples": "ajv -s schemas/model-schema.json -d \"examples/**/*.json\"",
+    "watch:schemas": "npm-watch build",
+    "watch:examples": "npm-watch test:examples"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ajv-cli": "^3.0.0",
+    "npm-watch": "^0.4.0",
+    "replace": "^1.0.0",
+    "yamljs": "^0.3.0"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "schemas",
+        "examples",
+        "."
+      ],
+      "extensions": "yaml",
+      "ignore": "openapi.yaml"
+    },
+    "test:examples": {
+      "patterns": [
+        "examples"
+      ],
+      "extensions": "json"
+    }
+  },
+  "dependencies": {}
+}

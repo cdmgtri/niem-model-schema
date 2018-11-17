@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schemas/model-schema.json",
+  "model": {
+    "name": "Hill Valley Arrest Report",
+    "source": "Hill Valley Police Department",
+    "definition": "The Hill Valley Arrest Report is part of a pilot project to extend the standard XYZ Arrest Report message with additional information.",
+    "description": "The Hill Valley Police Department Arrest Report is part of a pilot project to extend the standard XYZ Arrest Report message with additional information.  This includes ...  A message is sent from ... when ... if ... to ...",
+    "website": "https://example.com/hvpd/specifications/arrest-report/docs",
+    "more": {},
+    "packages": [{
+        "modelName": "Hill Valley Arrest Report",
+        "version": "1.0",
+        "baseNIEM": "2.0",
+        "location": "https://github.com/niem/niem-model-api/tree/master/repo/hvpd-arrest-rpt-1.0",
+        "uri": "https://example.com/hvpd/specifications/arrest-report/1.0",
+        "changeSummary": "Initial IEPD"
+      },
+      {
+        "modelName": "Hill Valley Arrest Report",
+        "version": "2.0",
+        "baseNIEM": "2.0",
+        "location": "https://github.com/niem/niem-model-api/tree/master/repo/hvpd-arrest-rpt-2.0",
+        "uri": "https://example.com/hvpd/specifications/arrest-report/2.0",
+        "changeSummary": "Version 2.0 adds five additional fields to capture information about ..."
+      }
+    ]
+  }
+}
