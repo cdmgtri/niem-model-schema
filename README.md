@@ -59,12 +59,21 @@ npm run convert
 npm run test
 ```
 
+### JSDocs
+
+- Generate custom JSDoc types for the definitions in `model-schema.json`. (This will support code hinting for NIEM objects in other projects.)
+
+```sh
+npm run jsdocs
+```
+
 ### Build
 
 Run the above steps with one command:
 
 - Convert
 - Test
+- Build JSDocs
 
 ```sh
 npm run build

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Conceptual schema for the underlying NIEM data model.",
   "scripts": {
-    "build": "npm run convert && npm run test",
+    "build": "npm run convert && npm run test && npm run jsdocs",
     "convert": "yaml2json -p -s schemas && npm run test",
+    "jsdocs": "node src/build-jsdocs.js",
     "test": "npm run test:schemas && npm run test:examples",
     "test:schemas": "ajv -s assets/json-schema-07.json -d \"schemas/*-schema.json\"",
     "test:examples": "ajv -s schemas/model-schema.json -d \"examples/**/*.json\"",
@@ -37,5 +38,7 @@
       "extensions": "json"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "json-schema-to-jsdoc": "github:n3ps/json-schema-to-jsdoc"
+  }
 }
