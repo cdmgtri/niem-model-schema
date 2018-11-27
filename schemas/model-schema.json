@@ -2,49 +2,42 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "model-schema.json",
   "properties": {
-    "$schema": {
-      "type": "string"
-    },
     "model": {
-      "$ref": "#/definitions/modelType",
+      "$ref": "#/definitions/ModelType",
       "description": "A representation of the NIEM data model, an IEPD, an EIEM, or another kind of NIEM-based data model."
     },
-    "name": {
-      "type": "string",
-      "description": "A name of a resource."
-    },
-    "definition": {
-      "type": "string",
-      "description": "A definition for or description of a resource."
-    },
     "package": {
-      "$ref": "#/definitions/packageType",
+      "$ref": "#/definitions/PackageType",
       "description": "A specific version or release of a model."
-    },
-    "baseNIEM": {
-      "type": "string",
-      "description": "A NIEM release that this resource is based on.",
-      "example": "4.0"
-    },
-    "more": {
-      "type": "object",
-      "description": "Any additional metadata to be captured."
     }
   },
   "definitions": {
-    "modelType": {
+    "ModelType": {
       "type": "object",
       "description": "A data type representing the NIEM data model, an IEPD, an EIEM, or another kind of NIEM-based data model.",
       "properties": {
         "name": {
-          "$ref": "#/properties/name"
+          "type": "string",
+          "description": "A name of a model."
         },
-        "definition": {
-          "$ref": "#/properties/definition"
+        "summary": {
+          "type": "string",
+          "description": "A definition or summary statement of a model."
         },
         "description": {
           "type": "string",
           "description": "A detailed description of a model."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "NIEM Release",
+            "NIEM Core Supplement",
+            "NIEM Domain Update",
+            "IEPD",
+            "Local Model"
+          ],
+          "description": "A kind of model."
         },
         "source": {
           "type": "string",
@@ -60,22 +53,21 @@
         },
         "packages": {
           "type": "array",
+          "description": "A set of packages that belong to this model.",
           "items": {
-            "$ref": "#/definitions/packageType"
+            "$ref": "#/definitions/PackageType"
           }
-        },
-        "more": {
-          "$ref": "#/properties/more"
         }
       },
       "additionalProperties": false
     },
-    "packageType": {
+    "PackageType": {
       "type": "object",
       "description": "A data type for a specific version or release of a model.",
       "properties": {
         "modelName": {
-          "type": "string"
+          "type": "string",
+          "description": "A name of the model to which this package belongs."
         },
         "version": {
           "type": "string",
@@ -87,7 +79,9 @@
           "example": "alpha1"
         },
         "baseNIEM": {
-          "$ref": "#/properties/baseNIEM"
+          "type": "string",
+          "description": "A NIEM release that this resource is based on.",
+          "example": "4.0"
         },
         "uri": {
           "type": "string",
@@ -101,8 +95,16 @@
           "type": "string",
           "description": "A URL for the model package folder."
         },
+        "conformanceTargets": {
+          "type": "array",
+          "description": "One or more classes of artifact to which this artifact conforms.",
+          "items": {
+            "type": "string"
+          }
+        },
         "more": {
-          "$ref": "#/properties/more",
+          "type": "object",
+          "description": "Any additional metadata to be captured.",
           "example": {
             "metadata.xml": {
               "Metadata": {
@@ -117,6 +119,5 @@
       },
       "additionalProperties": false
     }
-  },
-  "additionalProperties": false
+  }
 }

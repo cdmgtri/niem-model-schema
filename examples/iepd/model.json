@@ -3,10 +3,10 @@
   "model": {
     "name": "Hill Valley Arrest Report",
     "source": "Hill Valley Police Department",
-    "definition": "The Hill Valley Arrest Report is part of a pilot project to extend the standard XYZ Arrest Report message with additional information.",
+    "summary": "The Hill Valley Arrest Report is part of a pilot project to extend the standard XYZ Arrest Report message with additional information.",
     "description": "The Hill Valley Police Department Arrest Report is part of a pilot project to extend the standard XYZ Arrest Report message with additional information.  This includes ...  A message is sent from ... when ... if ... to ...",
+    "kind": "IEPD",
     "website": "https://example.com/hvpd/specifications/arrest-report/docs",
-    "more": {},
     "packages": [{
         "modelName": "Hill Valley Arrest Report",
         "version": "1.0",

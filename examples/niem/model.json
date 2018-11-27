@@ -3,8 +3,9 @@
   "model": {
     "name": "NIEM",
     "source": "NIEM Management Office",
-    "definition": "National Information Exchange Model releases",
+    "summary": "National Information Exchange Model releases",
     "description": "NIEM is a common vocabulary that enables efficient information exchange across diverse public and private organizations. NIEM can save time and money by providing consistent, reusable data terms and definitions, and repeatable processes.",
+    "kind": "NIEM Release",
     "website": "https://niem.gov"
   }
 }

@@ -5,6 +5,9 @@
     "version": "4.1",
     "baseNIEM": "4.1",
     "location": "https://github.com/NIEM/NIEM-Releases/tree/niem-4.1",
-    "changeSummary": "See https://github.com/NIEM/NIEM-Releases/blob/niem-4.1/README.md for release notes."
+    "changeSummary": "See https://github.com/NIEM/NIEM-Releases/blob/niem-4.1/README.md for release notes.",
+    "conformanceTargets": [
+      "http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ReferenceSchemaDocument"
+    ]
   }
 }
