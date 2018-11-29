@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/model-schema.json",
-  "package": {
+  "version": {
     "modelName": "NIEM",
     "version": "4.1",
     "baseNIEM": "4.1",

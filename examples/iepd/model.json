@@ -7,7 +7,7 @@
     "description": "The Hill Valley Police Department Arrest Report is part of a pilot project to extend the standard XYZ Arrest Report message with additional information.  This includes ...  A message is sent from ... when ... if ... to ...",
     "kind": "IEPD",
     "website": "https://example.com/hvpd/specifications/arrest-report/docs",
-    "packages": [{
+    "versions": [{
         "modelName": "Hill Valley Arrest Report",
         "version": "1.0",
         "baseNIEM": "2.0",

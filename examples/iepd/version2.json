@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/model-schema.json",
-  "package": {
+  "version": {
     "modelName": "Hill Valley Arrest Report",
     "version": "2.0",
     "baseNIEM": "2.0",

@@ -1,16 +1,19 @@
 
 # NIEM Model Schema
 
+[![Build Status](https://travis-ci.org/cdmgtri/niem-model-schema.svg?branch=dev)](https://travis-ci.org/cdmgtri/niem-model-schema)
+
 Although specific NIEM schema syntaxes may change based on language (XML, JSON, UML) and NDR version, the same kinds of information are captured and represented in each.  This project defines a schema for that underlying conceptual structure of the NIEM data model.
 
 Example:
 
-- Models have packages (e.g., releases or versions).
-- Packages have a set of namespaces and artifacts.
+- Models have versions.
+- Versions have a set of namespaces.
 - Namespaces have prefixes, identifiers, properties, and types.
 - Properties have prefixes, names, definitions, and (usually) types.
 - Types have prefixes, names, definitions, and content.
 - Codes have values and definitions.
+- Packages have schemas representing a version of a model, and a set of supporting artifacts.
 
 ## Big Picture
 
@@ -25,7 +28,7 @@ This will create a much more robust NIEM tool environment with new or improved s
 
 ## Status
 
-Initial fields for the `Model` and `Package` objects have been added as a proof of concept.  These objects are not complete and the fields will undergo changes.
+Initial fields for the `Model` and `Version` objects have been added as a proof of concept.  These objects are not complete and the fields will undergo changes.
 
 The following objects have not yet been added:
 
@@ -33,6 +36,7 @@ The following objects have not yet been added:
 - `Property`
 - `Type`
 - `Code`
+- `Package`
 
 ## Usage
 
