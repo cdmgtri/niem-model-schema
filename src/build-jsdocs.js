@@ -19,7 +19,7 @@ for( let key in schema.definitions ) {
   str = jsdoc(schema.definitions[key]);
 
   // Format the name for the JSDoc @typedef parameter (e.g., ModelType => NIEMModel)
-  let name = "NIEM" + key.replace("Type", "");
+  let name = "NIEM" + key;
 
   // Update the JSDoc to replace the empty @name parameter with @typedef
   str = str.replace("@name", "@typedef {Object} " + name);
@@ -29,6 +29,20 @@ for( let key in schema.definitions ) {
 
   jsDocs += str + "\n\n";
 }
+
+jsDocs += `
+
+/** @type {NIEMModelType} */
+let NIEMModel;
+
+/** @type {NIEMVersionType} */
+let NIEMVersion;
+
+module.exports = {
+  NIEMModel,
+  NIEMVersion
+}
+`;
 
 fs.writeFileSync("jsdocs/index.js", jsDocs);
 console.log("Updated jsdocs");

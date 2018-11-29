@@ -1,7 +1,7 @@
 
 /**
   * A data type representing the NIEM data model, an IEPD, an EIEM, or another kind of NIEM-based data model.
-  * @typedef {Object} NIEMModel 
+  * @typedef {Object} NIEMModelType 
   *
   * @property {string} [name] - A name of a model. 
   * @property {string} [summary] - A definition or summary statement of a model. 
@@ -16,7 +16,7 @@
 
 /**
   * A data type for a specific set of versioned namespaces of a model.
-  * @typedef {Object} NIEMVersion 
+  * @typedef {Object} NIEMVersionType 
   *
   * @property {string} [modelName] - A name of the model to which this version belongs. 
   * @property {string} [version] - A version number. 
@@ -30,3 +30,15 @@
   */
 
 
+
+
+/** @type {NIEMModelType} */
+let NIEMModel;
+
+/** @type {NIEMVersionType} */
+let NIEMVersion;
+
+module.exports = {
+  NIEMModel,
+  NIEMVersion
+}

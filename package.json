@@ -2,6 +2,7 @@
   "name": "niem-model-schema",
   "version": "1.0.0",
   "description": "Conceptual schema for the underlying NIEM data model.",
+  "main": "jsdocs/index.js",
   "scripts": {
     "build": "npm run convert && npm run test && npm run jsdocs",
     "convert": "yaml2json -p -s schemas && npm run test",
