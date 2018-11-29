@@ -33,10 +33,10 @@ for( let key in schema.definitions ) {
 jsDocs += `
 
 /** @type {NIEMModelType} */
-let NIEMModel;
+let NIEMModel = {};
 
 /** @type {NIEMVersionType} */
-let NIEMVersion;
+let NIEMVersion = {};
 
 module.exports = {
   NIEMModel,
